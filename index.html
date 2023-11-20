@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Проверка файла</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result-container {
+            margin-top: 30px;
+        }
+
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .result-table th,
+        .result-table td {
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .result-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .result-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .result-table tbody tr:hover {
+            background-color: #eaeaea;
+        }
+        .message-container {
+        margin-top: 10px;
+        color: red;
+        }
+             
+        .message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Проверка файла</h1>
+
+        <div class="form-group">
+            <label for="fileInput">Выберите файл:</label>
+            <input type="file" id="fileInput">
+        </div>
+
+      <div class="form-group">
+        <div id="messageContainer" class="message-container"></div>
+    </div>
+
+        <div class="form-group">
+            <button id="checkButton" onclick="startFileCheck()">Проверить</button>
+        </div>
+
+        <div class="result-container">
+            <table id="resultContainer" class="result-table"></table>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

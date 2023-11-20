@@ -1,0 +1,28 @@
+{
+  "name": "Sandbox-virustotal-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "api": "^6.0.0",
+    "electron": "^25.2.0"
+  },
+  "build": {
+    "appId": "sandbox.virustotal.api",
+    "productName": "Sandbox virustotal api",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
